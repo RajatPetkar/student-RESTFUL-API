@@ -14,6 +14,10 @@ router.post("/students", async (req,res)  => {
     }
 })
 
+router.get('/',async(req,res) => {
+    res.send('Go to /students to vie all the student present in database')
+})
+
 router.get('/students', async(req,res) =>{
     try{
         const studentsData = await Student.find();
